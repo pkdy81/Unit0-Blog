@@ -17,7 +17,7 @@ const DEFAULTS = {
   },
   about: {
     title:      '진심을 담은 한 점',
-    desc:       '1994년부터 한자리를 지켜온 불판의 정석입니다. 매일 아침 직접 고른 신선한 국내산 한우만을 사용하며, 30년 넘게 변함없이 이어온 비법 양념과 참숯 화로로 최고의 맛을 선사합니다.',
+    body:       '1994년부터 한자리를 지켜온 불판의 정석입니다. 매일 아침 직접 고른 신선한 국내산 한우만을 사용하며, 30년 넘게 변함없이 이어온 비법 양념과 참숯 화로로 최고의 맛을 선사합니다.',
     image:      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
     stat_year:      '30+',
     stat_customers: '50만+',
@@ -31,9 +31,9 @@ const DEFAULTS = {
     transport: '합정역 2번 출구 도보 5분',
   },
   menu: [
-    { name: '한우 꽃등심', desc: '1++ 등급 한우 꽃등심, 참숯 직화', price: '75,000원 / 200g', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80' },
-    { name: '한우 갈비살', desc: '촉촉한 마블링의 최상급 갈비살', price: '68,000원 / 200g', image: 'https://images.unsplash.com/photo-1567364816519-cbc9c4ffe1eb?w=600&q=80' },
-    { name: '목살 구이', desc: '비법 양념에 재운 제주 흑돼지 목살', price: '18,000원 / 200g', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80' },
+    { name: '한우 꽃등심', body: '1++ 등급 한우 꽃등심, 참숯 직화', price: '75,000원 / 200g', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80' },
+    { name: '한우 갈비살', body: '촉촉한 마블링의 최상급 갈비살', price: '68,000원 / 200g', image: 'https://images.unsplash.com/photo-1567364816519-cbc9c4ffe1eb?w=600&q=80' },
+    { name: '목살 구이',   body: '비법 양념에 재운 제주 흑돼지 목살', price: '18,000원 / 200g', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80' },
   ],
   gallery: [
     'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1000&q=80',
@@ -80,7 +80,7 @@ function renderHero(data) {
 function renderAbout(data) {
   const d = { ...DEFAULTS.about, ...data };
   setText('about-title',      d.title);
-  setText('about-desc',       d.desc);
+  setText('about-desc',       d.body);
   setImage('about-image',     d.image);
   setText('stat-year',        d.stat_year);
   setText('stat-customers',   d.stat_customers);
@@ -101,7 +101,7 @@ function renderMenu(items) {
       </div>
       <div class="menu-card-body">
         <p class="menu-card-name">${item.name}</p>
-        <p class="menu-card-desc">${item.desc}</p>
+        <p class="menu-card-desc">${item.body}</p>
         <p class="menu-card-price">${item.price}</p>
       </div>
     </div>
