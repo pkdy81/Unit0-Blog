@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">불판의 정석</title>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== 네비게이션 ===== -->
+  <header class="nav-header">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo">불판의 정석</a>
+      <nav class="nav-links">
+        <a href="#about">소개</a>
+        <a href="#menu">메뉴</a>
+        <a href="#gallery">갤러리</a>
+        <a href="#contact">오시는 길</a>
+      </nav>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- 모바일 드롭다운 -->
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#about">소개</a>
+      <a href="#menu">메뉴</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#contact">오시는 길</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO 섹션 ===== -->
+  <section id="hero" class="section-hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" id="hero-eyebrow">한국 전통 숯불구이</p>
+      <h1 class="hero-title" id="hero-title">불판의 정석</h1>
+      <p class="hero-subtitle" id="hero-subtitle">30년 내공의 불맛, 그 한 점에 담다</p>
+      <a href="#menu" class="btn-primary">메뉴 보기</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT 섹션 ===== -->
+  <section id="about" class="section-about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img id="about-image" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="가게 소개 이미지" />
+        </div>
+        <div class="about-text">
+          <span class="section-label">우리 이야기</span>
+          <h2 id="about-title">진심을 담은 한 점</h2>
+          <p id="about-desc">1994년부터 한자리를 지켜온 불판의 정석입니다. 매일 아침 직접 고른 신선한 국내산 한우만을 사용하며, 30년 넘게 변함없이 이어온 비법 양념과 참숯 화로로 최고의 맛을 선사합니다. 가족과 함께, 소중한 사람과 함께 — 모든 순간이 특별해지는 곳입니다.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" id="stat-year">30+</span>
+              <span class="stat-label">년의 역사</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="stat-customers">50만+</span>
+              <span class="stat-label">누적 방문객</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" id="stat-award">12회</span>
+              <span class="stat-label">수상 경력</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU 섹션 ===== -->
+  <section id="menu" class="section-menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">대표 메뉴</span>
+        <h2>엄선한 메뉴</h2>
+        <p class="section-desc">국내산 한우 및 프리미엄 돼지고기만 사용합니다</p>
+      </div>
+      <div class="menu-grid" id="menu-grid">
+        <!-- JS로 동적 생성 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY 섹션 ===== -->
+  <section id="gallery" class="section-gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">갤러리</span>
+        <h2>우리 가게 이야기</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- JS로 동적 생성 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT 섹션 ===== -->
+  <section id="contact" class="section-contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label light">오시는 길</span>
+          <h2 id="contact-title">찾아오세요</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>주소</strong>
+                <p id="contact-address">서울특별시 마포구 어울마당로 123</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>전화</strong>
+                <p id="contact-phone">02-1234-5678</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">🕐</span>
+              <div>
+                <strong>영업시간</strong>
+                <p id="contact-hours">매일 11:30 – 22:00 (브레이크 15:00–17:00)</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon">🚇</span>
+              <div>
+                <strong>교통편</strong>
+                <p id="contact-transport">합정역 2번 출구 도보 5분</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-map" id="contact-map">
+          <div class="map-placeholder">
+            <span>지도 영역</span>
+            <p id="contact-map-desc">추후 카카오맵 또는 네이버맵 연동</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p id="footer-copy">© 2025 불판의 정석. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 설정 & 로직 -->
+  <script src="config.js"></script>
+  <script src="logic.js"></script>
+</body>
+</html>
